@@ -1,0 +1,22 @@
+{
+  "name": "pflanzen",
+  "version": "1.0.0",
+  "description": "Ein Pflanzen Laden",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tim-Boehringer/Verteilte-Systeme-Gruppe-Pflanzen.git"
+  },
+  "author": "Tim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tim-Boehringer/Verteilte-Systeme-Gruppe-Pflanzen/issues"
+  },
+  "homepage": "https://github.com/Tim-Boehringer/Verteilte-Systeme-Gruppe-Pflanzen#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
