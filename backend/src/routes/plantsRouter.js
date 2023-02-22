@@ -9,7 +9,7 @@ import {
 const router = express.Router();
 
 router.get("/", getAllPlants);
-router.get("/search", findPlants);
+router.get("/search", findPlantsByName);
 router.get("/:id", findPlantsById);
 router.post("/add", addPlants);
 

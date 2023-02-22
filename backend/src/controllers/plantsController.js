@@ -1,4 +1,5 @@
 import { check, validationResult } from "express-validator";
+import { Plants } from "../models/plants.js";
 
 const plants = [
   {
@@ -15,18 +16,19 @@ const plants = [
   },
 ];
 
-export const getAllPlants = (req, res) => {
+export const getAllPlants = async (req, res) => {
+  const plants = await Plants.find();
   res.status(200).send(plants);
 };
 
-export const findPlants = (req, res) => {
-  let result = plants.filter((plant) => plant.name == req.query.name);
+export const findPlantsByName = async (req, res) => {
+  let result = await Plants.find({ name: req.query.name });
   res.status(200).send(result);
 };
 
-export const findPlantsById = (req, res) => {
-  let plants = plants.find((p) => p.id == req.params.id);
-  res.status(200).send(plant);
+export const findPlantsById = async (req, res) => {
+  let book = await Plants.findById(req.params.id);
+  res.status(200).send(plants);
 };
 
 export const addPlants = (req, res) => {
@@ -34,9 +36,13 @@ export const addPlants = (req, res) => {
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
   }
-  let plants = req.body;
-  plants.push(plant);
-  res.status(201).send(`Added ${plant.name} to plant collection`);
+  const plants = new Plants({
+    name: req.body.name,
+    category: req.body.category,
+    price: req.body.price,
+  });
+
+  plants.save(plants).then((todo) => res.status(201).send(todo));
 };
 
 // attached as second param in a route
