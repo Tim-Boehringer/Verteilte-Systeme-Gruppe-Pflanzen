@@ -8,3 +8,4 @@ app.listen(port, () => {
 });
 mongoose.connect("mongodb://mongo:27017/test").then(() => {
   console.log("Database connected");
+});
