@@ -6,13 +6,13 @@ const plants = [
     id: 0,
     name: "Efeu",
     category: "Kletterpflanze",
-    price: "19€",
+    price: "19",
   },
   {
     id: 1,
     name: "Tulpe",
     category: "Blume",
-    price: "1.20€",
+    price: "1.20",
   },
 ];
 
