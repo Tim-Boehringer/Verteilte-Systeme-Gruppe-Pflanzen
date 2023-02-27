@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const potsSchema = new mongoose.Schema({
   name: String,
-  maße: String,
+  dimensions: String,
   material: String,
 });
 

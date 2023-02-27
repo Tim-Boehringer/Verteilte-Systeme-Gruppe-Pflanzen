@@ -5,13 +5,13 @@ const pots = [
   {
     id: 0,
     name: "Alutopf",
-    maße: "25x15cm",
+    dimensions: "25x15cm",
     material: "Aluminium",
   },
   {
     id: 1,
     name: "Tontopf",
-    maße: "10x12cm",
+    dimensions: "10x12cm",
     material: "Ton",
   },
 ];
@@ -38,7 +38,7 @@ export const addPots = (req, res) => {
   }
   const pots = new Pots({
     name: req.body.name,
-    maße: req.body.maße,
+    dimensions: req.body.dimensions,
     material: req.body.material,
   });
 
@@ -48,6 +48,6 @@ export const addPots = (req, res) => {
 // attached as second param in a route
 export const newPlantValidators = [
   check("name").notEmpty().withMessage("name field required"),
-  check("maße").notEmpty().withMessage("maße field required"),
+  check("maße").notEmpty().withMessage("dimensions field required"),
   check("material").notEmpty().withMessage("material field required"),
 ];
