@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const plantsSchema = new mongoose.Schema({
   name: String,
-  catategory: String,
+  category: String,
   price: Number,
 });
 
