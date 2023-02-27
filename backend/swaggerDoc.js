@@ -22,7 +22,7 @@ const swaggerDocs = {
   paths: {
     "/": {
       get: {
-        tags: ["Books"],
+        tags: ["Plants"],
         summary: "Get all plants that exist in the system",
         responses: {
           200: {
