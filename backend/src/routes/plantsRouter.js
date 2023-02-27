@@ -1,7 +1,7 @@
 import express from "express";
 import {
   getAllPlants,
-  findPlants,
+  findPlantsByName,
   findPlantsById,
   addPlants,
 } from "../controllers/plantsControllers.js";
