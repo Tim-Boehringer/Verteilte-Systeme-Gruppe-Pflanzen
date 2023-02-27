@@ -1,6 +1,7 @@
 import express from "express";
-import swaggerUi from "swagger-ui-express";
 import mongoose from "mongoose";
+import bodyParser from "body-parser";
+import swaggerUi from "swagger-ui-express";
 
 import plantsRouter from "./routes/plantsRouter.js";
 import swaggerDocs from "../swaggerDoc.js";
