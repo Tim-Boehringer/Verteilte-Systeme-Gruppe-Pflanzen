@@ -4,7 +4,7 @@ import {
   findPlantsByName,
   findPlantsById,
   addPlants,
-} from "../controllers/plantsControllers.js";
+} from "../controllers/plantsController.js";
 
 const router = express.Router();
 
