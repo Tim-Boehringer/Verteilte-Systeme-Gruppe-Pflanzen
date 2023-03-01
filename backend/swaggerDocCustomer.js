@@ -2,7 +2,7 @@ const swaggerDocsCustomer = {
   swagger: "2.0",
   info: {
     version: "1.0.0",
-    title: "Example REST API Customer Store Service",
+    title: "Example REST API Plants Store Service",
     description: "API for a Plant Store",
     license: {
       name: "MIT",
