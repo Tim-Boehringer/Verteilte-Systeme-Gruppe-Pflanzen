@@ -53,6 +53,9 @@ const swaggerDocs = {
               $ref: "#/definitions/Plants",
             },
           },
+          400: {
+            description: "Validators for the inpur weren't matched",
+          },
         },
       },
     },
@@ -98,7 +101,7 @@ const swaggerDocs = {
           200: {
             description: "OK",
             schema: {
-              $ref: "#/definitions/PLants",
+              $ref: "#/definitions/Plants",
             },
           },
         },
