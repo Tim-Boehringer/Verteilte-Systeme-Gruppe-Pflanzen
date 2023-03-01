@@ -1,21 +1,6 @@
 import { check, validationResult } from "express-validator";
 import { Plants } from "../models/plants.js";
 
-const plants = [
-  {
-    id: 0,
-    name: "Efeu",
-    category: "Kletterpflanze",
-    price: "19",
-  },
-  {
-    id: 1,
-    name: "Tulpe",
-    category: "Blume",
-    price: "1.20",
-  },
-];
-
 export const getAllPlants = async (req, res) => {
   res.set("Access-Control-Allow-Origin", "http://localhost:3000");
   const plants = await Plants.find();

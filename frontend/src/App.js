@@ -31,7 +31,7 @@ class App extends React.Component {
           {/* generates a div for every entry */}
           {this.state.plants.map((plants, key) => (
             <div key={key}>
-              {plants.name} by {plants.id}
+              {plants.name} for {plants.price}
             </div>
           ))}
         </div>
