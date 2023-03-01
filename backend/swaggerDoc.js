@@ -98,7 +98,7 @@ const swaggerDocs = {
           200: {
             description: "OK",
             schema: {
-              $ref: "#/definitions/PLants",
+              $ref: "#/definitions/Plants",
             },
           },
         },
