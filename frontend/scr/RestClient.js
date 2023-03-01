@@ -1,6 +1,6 @@
 /* fetches api data from backend and extracts its json body */
 export async function fetchAllPlants() {
-  return await fetch("http://localhost:4000/books", {
+  return await fetch("http://localhost:4000/plants", {
     mode: "cors",
   })
     .then((res) => {
