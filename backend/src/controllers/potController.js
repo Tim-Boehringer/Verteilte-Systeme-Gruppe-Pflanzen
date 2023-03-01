@@ -17,6 +17,7 @@ const pots = [
 ];
 
 export const getAllPots = async (req, res) => {
+  res.set("Access-Control-Allow-Origin", "http://localhost:3000");
   const pots = await Pots.find();
   res.status(200).send(pots);
 };

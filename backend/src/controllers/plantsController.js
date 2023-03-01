@@ -17,6 +17,7 @@ const plants = [
 ];
 
 export const getAllPlants = async (req, res) => {
+  res.set("Access-Control-Allow-Origin", "http://localhost:3000");
   const plants = await Plants.find();
   res.status(200).send(plants);
 };
