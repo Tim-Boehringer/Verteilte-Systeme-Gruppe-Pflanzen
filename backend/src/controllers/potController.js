@@ -49,6 +49,6 @@ export const addPots = (req, res) => {
 // attached as second param in a route
 export const newPlantValidators = [
   check("name").notEmpty().withMessage("name field required"),
-  check("maße").notEmpty().withMessage("dimensions field required"),
+  check("dimensions").notEmpty().withMessage("dimensions field required"),
   check("material").notEmpty().withMessage("material field required"),
 ];
