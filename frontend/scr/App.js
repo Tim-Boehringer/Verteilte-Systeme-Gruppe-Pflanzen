@@ -23,7 +23,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div id="title">Plantshop </div>
+        <div id="title">Plantstore </div>
         <button id="fetcher" onClick={this.fetchDisplayData}>
           Check out our new plants
         </button>
