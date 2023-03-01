@@ -53,6 +53,9 @@ const swaggerDocs = {
               $ref: "#/definitions/Plants",
             },
           },
+          400: {
+            description: "Validators for the inpur weren't matched",
+          },
         },
       },
     },
