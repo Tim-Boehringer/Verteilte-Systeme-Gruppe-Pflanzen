@@ -17,6 +17,7 @@ const customer = [
 ];
 
 export const getAllCustomer = async (req, res) => {
+  res.set("Access-Control-Allow-Origin", "http://localhost:3000");
   const customers = await Customers.find();
   res.status(200).send(customers);
 };
