@@ -13,8 +13,8 @@ export const findPlantsByName = async (req, res) => {
 };
 
 export const findPlantsById = async (req, res) => {
-  let book = await Plants.findById(req.params.id);
-  res.status(200).send(plants);
+  let result = await Plants.findById(req.params.id);
+  res.status(200).send(result);
 };
 
 export const addPlants = (req, res) => {
@@ -28,7 +28,26 @@ export const addPlants = (req, res) => {
     price: req.body.price,
   });
 
-  plants.save(plants).then((todo) => res.status(201).send(todo));
+  plants.save(Plants).then((todo) => res.status(201).send(todo));
+};
+
+export const deletePlants = (req, res) => {
+  Plants.deleteOne({ name: req.query.name });
+  res.status(200);
+};
+
+export const patchPrice = (req, res) => {
+  Plants.updateOne(
+    { name: req.query.name },
+    { price: req.query.price },
+    function (err, docs) {
+      if (err) {
+        return res.status(400).json(err);
+      } else {
+        res.status(200);
+      }
+    }
+  );
 };
 
 // attached as second param in a route
