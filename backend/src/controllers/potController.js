@@ -46,6 +46,24 @@ export const addPots = (req, res) => {
   pots.save(pots).then((todo) => res.status(201).send(todo));
 };
 
+export const deletePots = (req, res) => {
+  Pots.deleteOne({ name: req.query.name });
+  res.status(200);
+};
+
+export const patchMaterial = (req, res) => {
+  Plants.updateOne(
+    { name: req.query.name },
+    { material: req.query.material },
+    function (err, docs) {
+      if (err) {
+        return res.status(400).json(err);
+      } else {
+        res.status(200);
+      }
+    }
+  );
+};
 // attached as second param in a route
 export const newPlantValidators = [
   check("name").notEmpty().withMessage("name field required"),
