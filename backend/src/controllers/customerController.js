@@ -45,6 +45,24 @@ export const addCustomers = (req, res) => {
 
   customers.save(customers).then((todo) => res.status(201).send(todo));
 };
+export const deleteCustomers = (req, res) => {
+  Customers.deleteOne({ name: req.query.name });
+  res.status(200);
+};
+
+export const patchEmail = (req, res) => {
+  Customers.updateOne(
+    { name: req.query.name },
+    { email: req.query.email },
+    function (err, docs) {
+      if (err) {
+        return res.status(400).json(err);
+      } else {
+        res.status(200);
+      }
+    }
+  );
+};
 
 // attached as second param in a route
 export const newPlantValidators = [
